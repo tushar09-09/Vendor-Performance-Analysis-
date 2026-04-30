@@ -68,17 +68,6 @@ Developed an interactive dashboard to support decision-making. Key features incl
 *   Translating raw data into meaningful business insights.
 
 ---
-
-## 📁 Project Structure
-├── data/                              # Raw datasets
-├── ingestion_db.py                   # Data ingestion pipeline
-├── get_vendor_summary.py             # SQL transformation & feature engineering
-├── Exploratory Data Analysis.ipynb   # EDA notebook
-├── Vendor Performance Analysis.ipynb # Analysis notebook
-├── logs/                             # Log files
-├── inventory.db                      # SQLite database
-└── README.md
-
 ## Future Enhancements
 *   **Workflow Orchestration:** Implement automated scheduling and monitoring using **Apache Airflow**.
 *   **Real-time Processing:** Enable real-time or incremental data ingestion to keep insights current.
