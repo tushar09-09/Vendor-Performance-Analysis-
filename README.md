@@ -70,8 +70,6 @@ Developed an interactive dashboard to support decision-making. Key features incl
 ---
 
 ## 📁 Project Structure
-
-``text
 ├── data/                              # Raw datasets
 ├── ingestion_db.py                   # Data ingestion pipeline
 ├── get_vendor_summary.py             # SQL transformation & feature engineering
