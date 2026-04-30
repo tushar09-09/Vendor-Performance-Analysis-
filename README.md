@@ -1,7 +1,8 @@
-# 📊 Vendor Performance Analysis
+# # 📊 Vendor Performance Analysis
 
 ## 🧠 Project Summary
 This project presents an end-to-end data analysis solution designed to evaluate vendor performance and optimize procurement strategies. By integrating multiple data sources and applying analytical techniques, the system provides actionable insights into vendor efficiency, profitability, and inventory utilization.
+
 The solution is built with a pipeline-based architecture that transforms raw transactional data into a structured analytical model and delivers business-ready insights through an interactive dashboard.
 
 ---
@@ -23,11 +24,12 @@ Without structured analysis, these issues lead to poor procurement decisions, in
 The project follows a modular data pipeline approach:
 ```mermaid
 flowchart LR
-A[Raw CSV Data] --> B[SQLite Database]
-B --> C[SQL Transformation using CTEs]
-C --> D[Feature Engineering]
-D --> E[EDA & Analysis]
-E --> F[Power BI Dashboard]
+    A[Raw CSV Data] --> B[SQLite Database]
+    B --> C[SQL Transformation using CTEs]
+    C --> D[Feature Engineering]
+    D --> E[EDA & Analysis]
+    E --> F[Power BI Dashboard]
+
 ### 4️⃣ Exploratory Data Analysis (EDA)
 *   Analyzed distribution of sales, costs, and margins.
 *   Identified outliers and anomalies in vendor performance.
