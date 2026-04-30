@@ -1,45 +1,90 @@
-# Vendor-Performance-Analysis-python-powerbi 
+Vendor Performance Analysis
+🔍 Overview
 
-This project performs a detailed **Vendor Performance Analysis** by consolidating multiple SQL data sources, analyzing performance metrics, and visualizing key business insights in Power BI. The objective is to help decision-makers identify underperforming vendors, optimize procurement strategies, and enhance vendor management.  
+This project focuses on analyzing vendor performance using real-world business metrics to help organizations optimize procurement, reduce costs, and improve profitability.
 
- 
-## 📌 Objective
+The system integrates multiple data sources such as purchases, sales, and vendor invoices to generate actionable insights about vendor efficiency, inventory utilization, and pricing strategies.
 
-To automate and streamline the process of analyzing vendor data by:
-- Extracting and merging data from multiple relational tables
-- Performing exploratory data analysis (EDA)
-- Classifying vendors based on defined business logic
-- Creating a visual Power BI dashboard for quick decision-making
+🎯 Business Objective
 
-  ## 🛠️ Tools & Technologies
+Organizations often struggle to answer critical questions such as:
 
-- **Python 3.x** – Data wrangling & transformation  
-- **Pandas** – Data manipulation  
-- **SQLite3** – Querying relational data  
-- **Power BI** – Interactive data visualization  
-- **Matplotlib / Seaborn** – Optional EDA plotting (if used)  
-- **Logging** – For debugging and traceability
+Which vendors are actually profitable?
+Where is money being wasted in procurement?
+Which products are overstocked or underperforming?
+Does bulk purchasing reduce costs effectively?
 
-  ## 🧩 Project Workflow
+This project addresses these challenges by building a data-driven vendor evaluation system.
 
-### 1. 🧠 Data Ingestion & Transformation (Script: `get_vendor_summary.py`)
+🧱 Project Architecture
 
-### 2. 📊 Exploratory Data Analysis (EDA)
+The project is designed as a data pipeline:
 
-Performed initial EDA using Python:
-- Checked for null values, outliers, and duplicates
-- Grouped vendors by category and calculated metrics
-- Used summary statistics to understand data distribution
-- Optional visualizations: Bar charts, box plots, etc.
+CSV Data → SQLite Database → SQL Transformation → Feature Engineering → Analysis → Power BI Dashboard
+⚙️ Tools & Technologies
+Python (Pandas, NumPy) – Data cleaning & transformation
+SQLite + SQL (CTEs) – Data modeling and aggregation
+SQLAlchemy – Database ingestion automation
+Power BI – Data visualization and dashboarding
+Logging Module – Pipeline monitoring & debugging
+🔄 Workflow
+1. Data Ingestion
+Loaded multiple CSV datasets (sales, purchases, invoices, pricing)
+Automated ingestion into SQLite database using Python
+Designed for scalability (can be extended to real-time data)
+2. Data Transformation (SQL)
+Used Common Table Expressions (CTEs) to modularize queries
+Created intermediate summaries:
+Purchase Summary
+Sales Summary
+Freight Cost Summary
+Joined datasets to build a vendor-level performance table
+3. Data Cleaning & Feature Engineering
+Handled missing values and data inconsistencies
+Standardized formats and removed noise
+Created key business metrics:
+Gross Profit
+Profit Margin (%)
+Stock Turnover
+Sales-to-Purchase Ratio
+4. Exploratory Data Analysis (EDA)
+Identified trends, outliers, and anomalies
+Evaluated vendor-wise and product-wise performance
+Analyzed distribution of sales, costs, and margins
+5. Business Analysis
 
-### 3. 📈 Vendor Performance Analysis
-It answers following business questions:
-- Identifying Brands that needs Promotional or Pricing Adjustments which exhibit lower sales performance but higher profit margins.
-- Which vendors and brands demonstrate the highest sales performance?
-- Which vendors contribute the most to toal purchase dollars?
-- How much of total procurement is dependent on the top vendors?
-- Does purchasing in bulk reduce the unit price, and what is the optimal purchase volume for cost savings?
-- How much capital is locked in unsold inventory per vendor and which vendors contribute the most to it?
+Key questions answered:
+
+Which vendors generate high revenue but low profit?
+Which vendors contribute most to procurement cost?
+Where is inventory stuck (low turnover)?
+What is the impact of bulk purchasing on pricing?
+How dependent is the business on top vendors?
+6. Dashboard (Power BI)
+Built an interactive dashboard for decision-makers
+Key features:
+Vendor performance ranking
+Profitability analysis
+Inventory efficiency tracking
+Purchase vs Sales comparison
+📈 Key Insights
+Identified vendors with high sales but low profitability
+Detected slow-moving inventory, leading to capital blockage
+Found pricing inefficiencies in bulk purchases
+Highlighted vendor dependency risks
+💡 Business Impact
+
+This project enables organizations to:
+
+Optimize vendor selection
+Reduce unnecessary procurement costs
+Improve inventory management
+Increase overall profitability
+🧪 Challenges & Learnings
+Managing joins across multiple datasets without data duplication
+Designing efficient SQL queries using CTEs
+Ensuring data consistency across different sources
+Translating raw data into business insights
 
   ### 4. 📉 Power BI Dashboard
 
