@@ -1,4 +1,4 @@
-# # 📊 Vendor Performance Analysis
+# 📊 Vendor Performance Analysis
 
 ## 🧠 Project Summary
 This project presents an end-to-end data analysis solution designed to evaluate vendor performance and optimize procurement strategies. By integrating multiple data sources and applying analytical techniques, the system provides actionable insights into vendor efficiency, profitability, and inventory utilization.
