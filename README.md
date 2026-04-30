@@ -19,10 +19,10 @@ Without structured analysis, these issues lead to poor procurement decisions, in
 
 ---
 
-## 🏗️ Solution Architecture
+# 🏗️ Solution Architecture
 
 The project follows a modular data pipeline approach:
-```mermaid
+``mermaid
 flowchart LR
     A[Raw CSV Data] --> B[SQLite Database]
     B --> C[SQL Transformation using CTEs]
